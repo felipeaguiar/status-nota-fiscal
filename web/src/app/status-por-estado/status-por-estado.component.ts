@@ -9,7 +9,7 @@ import { MessageService, SelectItem } from 'primeng/api';
 })
 export class StatusPorEstadoComponent implements OnInit {
 
-  estadoSelecionado: string;
+  estadoSelecionado: string = 'AM';
 
   estados = [
     { label: 'AM', value: 'AM' },
