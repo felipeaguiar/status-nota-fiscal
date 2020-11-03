@@ -1,0 +1,68 @@
+<h2>Status Atual</h2>
+
+<form class="mb-4">
+  <fieldset class="border p-3">
+    <legend class="w-auto px-2">Estado</legend>
+
+    <div class="form-row">
+      <div class="form-group col-md-10">
+        <label for="first-name">Selecione:</label>
+        <p-dropdown name="estado" [options]="estados" ></p-dropdown>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <p-button label="Buscar" (click)="buscar()"></p-button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Autorização:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.autorizacao | disponibilidade"></span>
+  </div>
+</div>
+
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Retorno Autorização:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.retornoAutorizacao | disponibilidade"></span>
+  </div>
+</div>
+
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Inutilização:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.inutilizacao | disponibilidade"></span>
+  </div>
+</div>
+
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Consulta Protocolo:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.consultaProtocolo | disponibilidade"></span>
+  </div>
+</div>
+
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Status Serviço:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.statusServico | disponibilidade"></span>
+  </div>
+</div>
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Consulta Cadastro:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.consultaCadastro | disponibilidade"></span>
+  </div>
+</div>
+<div class="form-group form-row">
+  <label for="email" class="col-md-2 col-form-label text-md-right">Recepção Evento:</label>
+  <div class="col-md">
+    <span [innerHTML]="status.recepcaoEvento | disponibilidade"></span>
+  </div>
+</div>
+

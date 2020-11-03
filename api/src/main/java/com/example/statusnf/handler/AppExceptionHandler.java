@@ -60,7 +60,7 @@ public class AppExceptionHandler {
 	@ExceptionHandler(NaoHaEstadosException.class)
 	public ResponseEntity<ApiResponse> handlerNaoHaEstadosException(NaoHaEstadosException e, Locale locale) {
 		
-		HttpStatus status = HttpStatus.OK;
+		HttpStatus status = HttpStatus.BAD_REQUEST;
 		String message = messageSource.getMessage("nao.ha.estado", null, locale);
 		
 		ApiResponse error = ApiResponse.of(status.value(), new ApiMessage("referential-integrity", message));
